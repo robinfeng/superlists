@@ -8,15 +8,16 @@ class NewVisitorTest(unittest.TestCase):
 
 	def tearDown(self):
 		self.browser.quit()
+#		pass
 
 	def test_can_start_a_list_and_retrieve_it_later(self):
 		# 晨晨听说有一个很酷的在线待办事项应用
 		# 她去看了这个应用的首页
 		self.browser.get('http://localhost:8000/')
 
-		# 她注意到网页的标题和头部都包含"To-Do"这个词
-		self.assertIn('To-Do', self.browser.title)
-		self.fail('Finish the test!')
+		# 她注意到网页的标题和头部都包含"待办"这个词
+		self.assertIn('待办', self.browser.title)
+		self.fail('测试完成!')
 
 		# 应用邀请她输入一个待办事项
 		# 她在一个文本框中输入了"购买孔雀羽毛"
